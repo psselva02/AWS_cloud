@@ -1,0 +1,78 @@
+psselva@DESKTOP-V19DP95:~$ nslookup guvi.in
+Server:         172.24.176.1
+Address:        172.24.176.1#53
+
+Non-authoritative answer:
+Name:   guvi.in
+Address: 172.67.70.207
+Name:   guvi.in
+Address: 104.26.4.88
+Name:   guvi.in
+Address: 104.26.5.88
+Name:   guvi.in
+Address: 2606:4700:20::681a:558
+Name:   guvi.in
+Address: 2606:4700:20::ac43:46cf
+Name:   guvi.in
+Address: 2606:4700:20::681a:458
+
+psselva@DESKTOP-V19DP95:~$ top
+top - 20:30:30 up  9:19,  1 user,  load average: 0.00, 0.02, 0.00
+Tasks:  33 total,   1 running,  32 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   7642.4 total,   6619.3 free,    586.0 used,    437.1 buff/cache
+MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.   6820.2 avail Mem
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                                                1 root      20   0  165896  11328   8380 S   0.0   0.1   2:49.90 systemd
+      2 root      20   0    2280   1300   1188 S   0.0   0.0   0:00.00 init-systemd(Ub
+      6 root      20   0    2308    144    132 S   0.0   0.0   0:00.00 init
+     41 root      19  -1   47728  17632  14564 S   0.0   0.2   0:00.11 systemd-journal
+     61 root      20   0   22220   5968   4464 S   0.0   0.1   0:00.10 systemd-udevd
+     81 root      20   0    4492    168     20 S   0.0   0.0   0:00.00 snapfuse
+     83 root      20   0    4848   1764   1296 S   0.0   0.0   0:00.56 snapfuse
+     84 root      20   0    4624    148      0 S   0.0   0.0   0:00.00 snapfuse
+     85 root      20   0    4736   1872   1356 S   0.0   0.0   0:01.57 snapfuse
+     86 root      20   0    4492    184     36 S   0.0   0.0   0:00.00 snapfuse
+     88 root      20   0    4492    168     20 S   0.0   0.0   0:00.00 snapfuse
+     89 root      20   0    4944   1884   1412 S   0.0   0.0   0:00.74 snapfuse
+    111 systemd+  20   0   25532  12620   8424 S   0.0   0.2   0:00.11 systemd-resolve
+    146 root      20   0    4304   2656   2404 S   0.0   0.0   0:00.02 cron
+    147 message+  20   0    8584   4640   4104 S   0.0   0.1   0:00.03 dbus-daemon
+    152 root      20   0   30104  19028  10236 S   0.0   0.2   0:00.08 networkd-dispat
+    153 syslog    20   0  222400   5032   4208 S   0.0   0.1   0:00.01 rsyslogd
+    156 root      20   0 2058324  44336  18544 S   0.0   0.6   0:01.45 snapd
+    159 root      20   0   15324   7472   6528 S   0.0   0.1   0:00.10 systemd-logind
+    221 root      20   0    4780   3360   3120 S   0.0   0.0   0:00.05 subiquity-serve
+    223 root      20   0  107224  21400  13284 S   0.0   0.3   0:00.06 unattended-upgr
+    229 root      20   0    3236   1100   1008 S   0.0   0.0   0:00.00 agetty
+    231 root      20   0    3192   1072    984 S   0.0   0.0   0:00.00 agetty
+    336 root      20   0  738244  81372  21176 S   0.0   1.0   0:18.62 python3.10
+    364 root      20   0    2288    112      0 S   0.0   0.0   0:00.00 SessionLeader
+    365 root      20   0    2304    116      0 S   0.0   0.0   0:00.04 Relay(366)
+    366 psselva   20   0    6220   5364   3524 S   0.0   0.1   0:00.06 bash
+    367 root      20   0    7520   4960   4040 S   0.0   0.1   0:00.00 login
+    426 psselva   20   0   16900   9144   7692 S   0.0   0.1   0:00.02 systemd
+    427 psselva   20   0  168776   3380     12 S   0.0   0.0   0:00.00 (sd-pam)
+    432 psselva   20   0    6068   4976   3332 S   0.0   0.1   0:00.01 bash
+    446 root      20   0   44120  37400   9912 S   0.0   0.5   1:40.66 python3
+ 133291 psselva   20   0    7932   3812   3096 R   0.0   0.0   0:00.02 top                                              
+
+
+
+
+
+
+
+
+psselva@DESKTOP-V19DP95:~$ ping google.com
+PING google.com (172.217.194.113) 56(84) bytes of data.
+64 bytes from si-in-f113.1e100.net (172.217.194.113): icmp_seq=1 ttl=100 time=5.39 ms
+64 bytes from si-in-f113.1e100.net (172.217.194.113): icmp_seq=2 ttl=100 time=4.47 ms
+64 bytes from si-in-f113.1e100.net (172.217.194.113): icmp_seq=3 ttl=100 time=4.88 ms
+^C
+--- google.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 4.469/4.914/5.392/0.377 ms
+psselva@DESKTOP-V19DP95:~$ telnet guvi.com:9000
+telnet: could not resolve guvi.com:9000/telnet: Name or service not known
+psselva@DESKTOP-V19DP95:~$
