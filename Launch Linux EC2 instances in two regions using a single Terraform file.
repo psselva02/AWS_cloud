@@ -1,0 +1,49 @@
+Create a folder named terraform-count-ec2-demo in the home directory and then change (cd) the working directory to that folder. This folder will contain all of the configuration files you'll be working with to launch ec2 instances.
+mkdir ~/terraform-count-ec2-demo
+cd ~/terraform-count-ec2-demo
+resource "aws_instance" "my-machine" {
+  # Creates four identical aws ec2 instances
+  count = 4     
+  
+  # All four instances will have the same ami and instance_type
+  ami = lookup(var.ec2_ami,var.region) 
+  instance_type = var.instance_type # 
+  tags = {
+    # The count.index allows you to launch a resource 
+    # starting with the distinct index number 0 and corresponding to this instance.
+    Name = "my-machine-${count.index}"
+  }
+}
+Now create another file under the ~/terraform-count-ec2-demo 
+# Creating a Variable for ami of type map
+
+
+variable "ec2_ami" {
+  type = map
+
+  default = {
+    us-east-2 = "ami-0416962131234133f"
+    us-west-1 = "ami-006fce872b320923e"
+  }
+}
+
+# Creating a Variable for region
+
+variable "region" {
+  default = us-east-2
+}
+
+
+# Creating a Variable for instance_type
+variable "instance_type" {    
+  type = string
+}
+
+provider "aws" {
+  region = "us-east-2"
+}
+
+cd ~\terraform-count-ec2-demo
+terraform init
+terraform apply
+Verifying the AWS EC2 instances on AWS Console
