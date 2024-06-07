@@ -1,0 +1,15 @@
+Login AWS- In CodeDeploy, go to Applications and click on ‘Create application’.
+Select compute platform ‘EC2/on premises’ and click on ‘Create application’.
+In CodeDeploy, go to Applications and click on ‘Create application’.
+Once you have created a CodeDeploy application, you need to create a deployment group. A deployment group is a set of EC2 instances where you can deploy your application.
+Before you create a deployment group, you will need to create a Service Role for code deploy.
+Go to IAM Dashboard -> Roles Click on “Create Role”.Click on the dropdown there will be an option code deploy, click on Next
+Create the name for role and click on Create.
+Now, In deployment group name and choose ‘Service role’. You will get generated codedeploy service role in search bar
+Now , In configuration you have to setup instance detail.
+Enable load balancer and Click on Create deployment group :(Optional)
+Create pipeline
+Add source stage: Our source is GitHub
+ Skip the build stage
+In adding the deploy stage: Choose the AWS CodeDeploy as the deploy provider, choose the right region, the application name that we created and the deployment group
+Browse the instance public IP address and test the application.
