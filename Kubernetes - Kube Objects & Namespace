@@ -1,0 +1,13 @@
+kubectl get namespaces
+se the file namespace-dev.yaml 
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: development
+  labels:
+    name: development
+Create the development
+kubectl create -f https://k8s.io/examples/admin/namespace-dev.yaml
+namespace-prod.yaml 
+kubectl create -f https://k8s.io/examples/admin/namespace-prod.yaml
+kubectl get namespaces --show-labels
